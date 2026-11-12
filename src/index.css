@@ -1,59 +1,101 @@
-:root {
-  --bg: #282c34;
-  --header: #fff;
-  --link: #61dafb;
-  --text: hsla(0, 0%, 100%, 0.88);
+
+/* General page styling */
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Merriweather", "Georgia", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: var(--bg);
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  background-color: #f5f7f2;
+  color: #333;
 }
 
-h1,
-h3 {
-  font-size: 2em;
-  font-family: Montserrat, sans-serif;
-  font-weight: 900;
-}
-
+/* Main blog container */
 .App {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2.5rem 1rem;
-  max-width: 700px;
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+/* Blog header */
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: #e5eee1;
+  border-radius: 12px;
+  margin-bottom: 25px;
 }
 
 header h1 {
-  font-size: 3em;
+  color: #657f60;
+  font-size: 38px;
+  margin: 0;
 }
 
+/* About section */
 aside {
-  display: flex;
-  margin-bottom: 3rem;
+  text-align: center;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #dce5d8;
 }
 
 aside img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 1rem;
-  background-color: black;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
+aside p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Article list */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Individual articles */
 article {
-  margin-bottom: 3rem;
-}
-
-article p {
-  margin-top: 0.25rem;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #a8bea3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 article h3 {
-  color: var(--link);
-  margin-bottom: 0rem;
+  color: #657f60;
+  margin-top: 0;
+  font-size: 22px;
+}
+
+article small {
+  color: #999;
+  display: block;
+  margin-bottom: 12px;
+}
+
+article p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .App {
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
 }
